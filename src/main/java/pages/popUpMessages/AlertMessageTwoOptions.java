@@ -13,6 +13,7 @@ public class AlertMessageTwoOptions {
 	
 	public static void getAlertMessageTwoOptionsComponents() throws MalformedURLException
 	{
+		BasicMethods.handlingWaits(typeExpectedCondition.presenceOfElementLocated,"//android.widget.TextView[@index='0']");
 		backGroundMessage = BasicMethods.getComponnet(backGroundMessage, typeIdSelenium.xpath, "//android.widget.FrameLayout[@index='0']");
 		messageAlert = BasicMethods.getComponnet(messageAlert, typeIdSelenium.xpath, "//android.widget.TextView[@index='0']");
 		btnNotConfirmation = BasicMethods.getComponnet(btnNotConfirmation, typeIdSelenium.xpath, "//android.widget.Button[@index='0']");

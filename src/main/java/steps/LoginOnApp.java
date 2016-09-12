@@ -47,8 +47,16 @@ public class LoginOnApp {
 	@And ("^I confirm the message displayed$")
 	public void I_confirm_the_message_displayed() throws Throwable
 	{
+		AlertMessageTwoOptions.getAlertMessageTwoOptionsComponents();
+		AlertMessageTwoOptions.answerYes();
+	}
+	
+	@And ("^I confirm the message of password Recovery displayed$")
+	public void I_confirm_the_message_of_password_Recovery_displayed() throws Throwable
+	{
 		AlertMessageOfConfirmation.getMessageOfConfirmationComponents();
 		AlertMessageOfConfirmation.aceptConfirmationMessage();
+
 	}
 	
 	@Then ("^App login should appears$")

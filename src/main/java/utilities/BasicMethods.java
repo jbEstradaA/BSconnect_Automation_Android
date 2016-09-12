@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import utilities.Enums.typeExpectedCondition;
 import utilities.Enums.typeIdSelenium;
 import motor.MainClassDriver;
@@ -53,19 +54,11 @@ public class BasicMethods extends MainClassDriver{
 	}
 	
 			
-	public static boolean waitForAComponent(String componentSource)
+	public static Boolean waitForAComponent(String componentSource)
 	{
-//		Wait<WebDriver> wait = new WebDriverWait( MainClassDriver.driver, 10 );
-//		//wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy((By)componentName));
-//		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(componentName)));
 		WebDriverWait wait = new WebDriverWait(driver, 3);
-		try {
-		   wait.until(ExpectedConditions.presenceOfElementLocated(By.id(componentSource)));
-		   return true;
-		} catch (Exception e) {
-			e.printStackTrace();
-		   return false;
-		} 
+		Boolean isPresent = wait.until(ExpectedConditions.elementSelectionStateToBe(By.xpath(componentSource),false));
+		return isPresent; 
 	}
 			
 	public static void handlingWaits(typeExpectedCondition type , String identifyName){

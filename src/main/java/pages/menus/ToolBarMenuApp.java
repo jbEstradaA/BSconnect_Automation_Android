@@ -15,9 +15,9 @@ public class ToolBarMenuApp
 	public static void getToolBarComponent() throws MalformedURLException
 	{
 		BasicMethods.handlingWaits(typeExpectedCondition.presenceOfElementLocated,"//android.widget.ImageButton[@index='0']");
-		menuSideBar = BasicMethods.getComponnet(menuSideBar, typeIdSelenium.xpath, ("//android.widget.ImageButton[@index='0']"));
-		txtTittlePage = BasicMethods.getComponnet(txtTittlePage, typeIdSelenium.xpath, ("//android.widget.TextView[@index='1']"));
-		btnEditProfile = BasicMethods.getComponnet(btnEditProfile, typeIdSelenium.xpath, "//android.support.v7.widget.LinearLayoutCompat[@index='2']/android.widget.TextView[@index='0']");
+		menuSideBar = BasicMethods.getComponnet(menuSideBar, typeIdSelenium.xpath, "//android.widget.ImageButton[@index='0']");
+		txtTittlePage = BasicMethods.getComponnet(txtTittlePage, typeIdSelenium.xpath, "//android.widget.TextView[@index='1']");
+		btnEditProfile = BasicMethods.getComponnet(btnEditProfile, typeIdSelenium.id, "com.belatrixsf.connect:id/action_edit_profile");
 		tabAccount = BasicMethods.getComponnet(tabAccount, typeIdSelenium.xpath, "//android.widget.TextView[@text='Account']");
 		tabRanking = BasicMethods.getComponnet(tabRanking, typeIdSelenium.xpath, "//android.widget.TextView[@text='Ranking']");
 		tabActivity = BasicMethods.getComponnet(tabActivity, typeIdSelenium.xpath, "//android.widget.TextView[@text='Activity']");
@@ -33,6 +33,11 @@ public class ToolBarMenuApp
 	public static void openEditProfile()
 	{
 		btnEditProfile.click();
+	}
+	
+	public static void rankingTab()
+	{
+		tabRanking.click();
 	}
 	
 	

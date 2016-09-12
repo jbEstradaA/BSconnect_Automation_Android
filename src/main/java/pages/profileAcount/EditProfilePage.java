@@ -1,14 +1,13 @@
 package pages.profileAcount;
 
 import java.net.MalformedURLException;
-import motor.MainClassDriver;
 import utilities.BasicMethods;
 import utilities.Enums.typeExpectedCondition;
 import utilities.Enums.typeIdSelenium;
+import motor.MainClassDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pages.popUpMessages.AlertToAllowPermitions;
-import pages.popUpMessages.SelectOptionUploadPicture;
 
 public class EditProfilePage{
 	
@@ -57,30 +56,28 @@ public class EditProfilePage{
 		else if (locationUSAtxt.equals(location))
 			rbtnLocationUSA.click();
 		
-//		btnPicture.click();
-//		Boolean existe;
-//		existe = BasicMethods.waitForAComponent("com.android.packageinstaller:id/dialog_container");
-//		
-//		System.out.println("se encontro el mensaje de primer aceptacion " + existe);
-//		
-//		if (existe.equals(true))
-//		{
-//			AlertToAllowPermitions.getAlertAllowPermitionsComponents();
-//			AlertToAllowPermitions.clickAllow();
-//			System.out.println("se acepto el primer mensaje");
-//			AlertToAllowPermitions.waitPermitionsMessage();
-//			AlertToAllowPermitions.clickAllow();
-//			System.out.println("se acepto el segundo mensaje mensaje");
-//			
-//			//Pasos normales para agregar la imagen
+		
+		Boolean existe = false;
+		if (existe.equals(true))
+		{
+			AlertToAllowPermitions.getAlertAllowPermitionsComponents();
+			AlertToAllowPermitions.clickAllow();
+			AlertToAllowPermitions.waitPermitionsMessage();
+			AlertToAllowPermitions.clickAllow();
+			btnPicture.click();
+		}
+		else
+		{
 //			btnPicture.click();
-//		}
-//		else
-//		{
-//			//btnPicture.click();
-//			SelectOptionUploadPicture.selectPickFromGallery();
-//			
-//		}
+//			try 
+//			{
+//				existe = BasicMethods.waitForAComponent("com.android.packageinstaller:id/dialog_container");
+//			} 
+//			catch (Exception e){}
+//			System.out.println("se encontro el mensaje de primer aceptacion " + existe);
+//			SelectOptionUploadPicture.getUploadPictureOptionComponent();
+//			SelectOptionUploadPicture.takePhoto();
+		}
 		
 	}
 	

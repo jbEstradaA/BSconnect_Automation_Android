@@ -7,7 +7,7 @@ Feature: Password Recovery Option and Login
 	And App show me a message of error
 	Then I go to Forgot Password option
 	When I request my New Passowrd after input my Email "<Email>"
-	And I confirm the message displayed 
+	And I confirm the message of password Recovery displayed 
 	Then App login should appears 
 
 	Examples:

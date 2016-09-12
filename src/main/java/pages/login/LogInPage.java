@@ -1,14 +1,11 @@
 package pages.login;
 
 import java.net.MalformedURLException;
-
 import motor.MainClassDriver;
 import utilities.BasicMethods;
 import utilities.Enums.typeIdSelenium;
-
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
 import pages.menus.SideBarMenuApp;
 import pages.menus.ToolBarMenuApp;
 import pages.popUpMessages.AlertMessageTwoOptions;
@@ -51,7 +48,7 @@ public class LogInPage {
 	
 	public static void logOutApp() throws Throwable
 	{
-		ToolBarMenuApp.getToolBarComponent();
+		//ToolBarMenuApp.getToolBarComponent();
 		ToolBarMenuApp.openMenuSideBar();
 		SideBarMenuApp.getSideBarComponent();
 		SideBarMenuApp.logOutUserSesion();

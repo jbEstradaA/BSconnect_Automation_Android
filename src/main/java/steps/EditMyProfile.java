@@ -48,7 +48,7 @@ public class EditMyProfile {
 
 	@When("^I select one Custom Picture$")
 	public void i_select_one_Custom_Picture() throws Throwable {
-		System.out.println("Todavia no se implementa la opcion de cambiar la imagen");
+		System.out.println("...");
 	}
 
 	@Then("^I click on done buton$")
