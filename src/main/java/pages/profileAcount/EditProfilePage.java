@@ -18,14 +18,14 @@ public class EditProfilePage{
 	{
 		BasicMethods.handlingWaits(typeExpectedCondition.presenceOfElementLocated,"//android.view.ViewGroup[@index='0']/android.widget.TextView[@index='1']");
 		titlePage = BasicMethods.getComponnet(titlePage, typeIdSelenium.xpath, "//android.view.ViewGroup[@index='0']/android.widget.TextView[@index='1']");
-		txtFirstName = BasicMethods.getComponnet(txtFirstName, typeIdSelenium.xpath, "//TextInputLayout[@index='0']/android.widget.EditText[@index='0']");
-		txtLastName = BasicMethods.getComponnet(txtLastName, typeIdSelenium.xpath, "//TextInputLayout[@index='1']/android.widget.EditText[@index='0']");
-		txtSkypeId = BasicMethods.getComponnet(txtSkypeId, typeIdSelenium.xpath, "//TextInputLayout[@index='2']/android.widget.EditText[@index='0']");
+		txtFirstName = BasicMethods.getComponnet(txtFirstName, typeIdSelenium.id, "com.belatrixsf.connect:id/firstName");
+		txtLastName = BasicMethods.getComponnet(txtLastName, typeIdSelenium.id, "com.belatrixsf.connect:id/lastName");
+		txtSkypeId = BasicMethods.getComponnet(txtSkypeId, typeIdSelenium.id, "com.belatrixsf.connect:id/skypeId");
 		rbtnLocationBA = BasicMethods.getComponnet(rbtnLocationBA, typeIdSelenium.xpath, "//android.widget.RadioGroup[@index='4']/android.widget.RadioButton[@index='0']");
 		rbtnLocationL = BasicMethods.getComponnet(rbtnLocationL, typeIdSelenium.xpath, "//android.widget.RadioGroup[@index='4']/android.widget.RadioButton[@index='1']");
 		rbtnLocationM = BasicMethods.getComponnet(rbtnLocationM, typeIdSelenium.xpath, "//android.widget.RadioGroup[@index='4']/android.widget.RadioButton[@index='2']");
 		rbtnLocationUSA = BasicMethods.getComponnet(rbtnLocationUSA, typeIdSelenium.xpath, "//android.widget.RadioGroup[@index='4']/android.widget.RadioButton[@index='3']");
-		tabDone = BasicMethods.getComponnet(tabDone, typeIdSelenium.xpath, "//android.support.v7.widget.LinearLayoutCompat[@index='2']/android.widget.TextView[@index='0']");
+		tabDone = BasicMethods.getComponnet(tabDone, typeIdSelenium.id, "com.belatrixsf.connect:id/action_done");
 		tabAtras = BasicMethods.getComponnet(tabAtras, typeIdSelenium.xpath, "//android.view.ViewGroup[@index='0']/android.widget.ImageButton[@index='0']");
 		btnPicture = BasicMethods.getComponnet(btnPicture, typeIdSelenium.xpath, "//android.widget.LinearLayout[@index='1']/android.widget.ImageView[@index='0']");
 	}

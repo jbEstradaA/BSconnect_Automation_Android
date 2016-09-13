@@ -35,11 +35,15 @@ public class ToolBarMenuApp
 		btnEditProfile.click();
 	}
 	
-	public static void rankingTab()
+	public static void openRankingTab()
 	{
 		tabRanking.click();
 	}
 	
+	public static void openTopTagsTab()
+	{
+		tabTopTags.click();
+	}
 	
 
 }

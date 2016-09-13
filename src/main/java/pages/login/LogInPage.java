@@ -16,11 +16,11 @@ public class LogInPage {
 	public static void getLoginPageComponent() throws MalformedURLException
 	{
 		lblTitlePage = BasicMethods.getComponnet(lblTitlePage, typeIdSelenium.xpath, "//android.widget.TextView[@index='1']");
-		txtUserName = BasicMethods.getComponnet(txtUserName, typeIdSelenium.xpath, "//TextInputLayout[@index='2']/android.widget.EditText[@index='0']");
-		txtPassword = BasicMethods.getComponnet(txtPassword, typeIdSelenium.xpath, "//TextInputLayout[@index='3']/android.widget.EditText[@index='0']");
-		btnLogin = BasicMethods.getComponnet(btnLogin, typeIdSelenium.xpath, "//android.widget.Button[@index='4']");
-		hlnkForgotPassword = BasicMethods.getComponnet(hlnkForgotPassword, typeIdSelenium.xpath, "//android.widget.TextView[@index='5']");
-		hlnkSignUp = BasicMethods.getComponnet(hlnkSignUp, typeIdSelenium.xpath, "//android.widget.TextView[@index='6']");
+		txtUserName = BasicMethods.getComponnet(txtUserName, typeIdSelenium.id, "com.belatrixsf.connect:id/username");
+		txtPassword = BasicMethods.getComponnet(txtPassword, typeIdSelenium.id, "com.belatrixsf.connect:id/password");
+		btnLogin = BasicMethods.getComponnet(btnLogin, typeIdSelenium.id, "com.belatrixsf.connect:id/log_in");
+		hlnkForgotPassword = BasicMethods.getComponnet(hlnkForgotPassword, typeIdSelenium.id, "com.belatrixsf.connect:id/forgot_password");
+		hlnkSignUp = BasicMethods.getComponnet(hlnkSignUp, typeIdSelenium.id, "com.belatrixsf.connect:id/sign_up");
 	}
 	
 	public static void loginOnApp (String userName, String passWord) throws Throwable 

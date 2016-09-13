@@ -8,25 +8,29 @@ import org.openqa.selenium.WebElement;
 
 public class SideBarMenuApp 
 {
-	public static WebElement nameUser, mailUser, homeOption, contactsOption, eventsOption, aboutOption, settingsOption, logoutOption, confirmationBtn;
+	public static WebElement nameUser, mailUser, btnHomeOption, btnContactsOption, btnEventsOption, btnAboutOption, btnSettingsOption, btnLogoutOption, confirmationBtn;
 	
 	public static void getSideBarComponent() throws MalformedURLException
 	{
-		nameUser = BasicMethods.getComponnet(nameUser, typeIdSelenium.xpath, "//android.widget.TextView[@index='1']");
-		mailUser = BasicMethods.getComponnet(mailUser, typeIdSelenium.xpath, "//android.widget.TextView[@index='2']");
-		homeOption = BasicMethods.getComponnet(homeOption, typeIdSelenium.xpath, "//android.support.v7.widget.LinearLayoutCompat[@index='1']");
-		contactsOption = BasicMethods.getComponnet(contactsOption, typeIdSelenium.xpath, "//android.support.v7.widget.LinearLayoutCompat[@index='2']");
-		eventsOption = BasicMethods.getComponnet(eventsOption, typeIdSelenium.xpath, "//android.support.v7.widget.LinearLayoutCompat[@index='3']");
-		aboutOption = BasicMethods.getComponnet(aboutOption, typeIdSelenium.xpath, "//android.support.v7.widget.LinearLayoutCompat[@index='4']");
-		settingsOption = BasicMethods.getComponnet(settingsOption, typeIdSelenium.xpath, "//android.support.v7.widget.LinearLayoutCompat[@index='5']");
-		logoutOption = BasicMethods.getComponnet(logoutOption, typeIdSelenium.xpath, "//android.widget.RelativeLayout[@index='1']/android.widget.LinearLayout[@index='1']/android.widget.TextView[@index='1']");
+		nameUser = BasicMethods.getComponnet(nameUser, typeIdSelenium.id, "com.belatrixsf.connect:id/full_name");
+		mailUser = BasicMethods.getComponnet(mailUser, typeIdSelenium.id, "com.belatrixsf.connect:id/email");
+		btnHomeOption = BasicMethods.getComponnet(btnHomeOption, typeIdSelenium.xpath, "//android.widget.CheckedTextView[@text='Home']");
+		btnContactsOption = BasicMethods.getComponnet(btnContactsOption, typeIdSelenium.xpath, "//android.widget.CheckedTextView[@text='Contacts']");
+		btnEventsOption = BasicMethods.getComponnet(btnEventsOption, typeIdSelenium.xpath, "//android.widget.CheckedTextView[@text='Events']");
+		btnAboutOption = BasicMethods.getComponnet(btnAboutOption, typeIdSelenium.xpath, "//android.widget.CheckedTextView[@text='About']");
+		btnSettingsOption = BasicMethods.getComponnet(btnSettingsOption, typeIdSelenium.xpath, "//android.widget.CheckedTextView[@text='Settings']");
+		btnLogoutOption = BasicMethods.getComponnet(btnLogoutOption, typeIdSelenium.id, "com.belatrixsf.connect:id/menu_logout");
 	}
-	
 	
 	public static void logOutUserSesion() throws MalformedURLException
 	{
-		logoutOption.click();
+		btnLogoutOption.click();
 		BasicMethods.handlingWaits(typeExpectedCondition.presenceOfElementLocated,"//android.widget.LinearLayout[@index='0']");
+	}
+	
+	public static void clickContactsOption()
+	{
+		btnContactsOption.click();
 	}
 
 }

@@ -11,7 +11,7 @@ public class CheckRanking {
 	@When("^I click on ranking Tab$")
 	public void i_click_on_ranking_Tab() throws Throwable {
 		ToolBarMenuApp.getToolBarComponent();
-		ToolBarMenuApp.rankingTab();
+		ToolBarMenuApp.openRankingTab();
 		System.out.println("I see the ranking page of default");
 	}
 
