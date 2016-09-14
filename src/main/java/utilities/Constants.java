@@ -15,7 +15,7 @@ public class Constants{
 	 */
 	//EndRegion
 	
-	public static final String HOST_URL="http://192.168.1.187:4723/wd/hub";
+	public static final String HOST_URL="http://127.0.0.1:4723/wd/hub";
 	public static final String DEVICE_NAME="CB5A28Q2LU";
 	public static final String PLATFORM_VERSION="6.0.1";
 	public static final String PLATFORM_NAME="Android";
@@ -25,8 +25,8 @@ public class Constants{
 	 */
 	public static final int ANDROID_DEVICE_READY_TIMEOUT=5;
 	public static final int DEVICE_READY_TIMEOUT=5;
-	//public static final String APP_PACKAGE="com.belatrixsf.connect";
-	//public static final String APP_ACTIVITY="com.belatrixsf.connect.ui.LauncherActivity";
+	public static final String APP_PACKAGE="com.belatrixsf.connect";
+	public static final String APP_ACTIVITY="com.belatrixsf.connect.ui.LauncherActivity";
 
 	/*
 	 * Only for iOS

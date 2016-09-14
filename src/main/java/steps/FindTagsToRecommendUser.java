@@ -37,7 +37,7 @@ public class FindTagsToRecommendUser {
 	@Then("^I see one list of all contacts with points in this Tag$")
 	public void i_see_one_list_of_all_contacts_with_points_in_this_Tag()
 			throws Throwable {
-		
+		TopTagsPage.viewTheResultSearch();
 		
 	}
 

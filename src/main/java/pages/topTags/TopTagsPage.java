@@ -1,9 +1,7 @@
 package pages.topTags;
 
 import java.net.MalformedURLException;
-
 import org.openqa.selenium.WebElement;
-
 import utilities.BasicMethods;
 import utilities.Enums.typeExpectedCondition;
 import utilities.Enums.typeIdSelenium;
@@ -26,7 +24,7 @@ public class TopTagsPage {
 		btnFindTag = BasicMethods.getComponnet(btnFindTag, typeIdSelenium.id,"com.belatrixsf.connect:id/action_search");
 	}
 
-	public static void getContactsPageComponents() throws MalformedURLException
+	public static void getContactsTopTagPageComponents() throws MalformedURLException
 	{
 		BasicMethods.handlingWaits(typeExpectedCondition.presenceOfElementLocated,"//android.widget.TextView[@index='1']");
 		btnBackPage = BasicMethods.getComponnet(btnBackPage, typeIdSelenium.xpath, "//android.widget.ImageButton[@index='0']");
@@ -48,7 +46,7 @@ public class TopTagsPage {
 	}
 	
 	
-	public static void selectAndroidTag()
+	public static void selectAndroidTagOption()
 	{
 		selectAndroidTag.click();
 	}
@@ -73,7 +71,7 @@ public class TopTagsPage {
 	
 	public static void viewTheResultSearch() throws MalformedURLException
 	{
-		getContactsPageComponents();
+		getContactsTopTagPageComponents();
 	}
 	
 
